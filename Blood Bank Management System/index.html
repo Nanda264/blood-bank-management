@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#donor">Donor</a></li>
+            <li><a href="#recipient">Recipient</a></li>
+            <li><a href="#admin">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <section id="home" class="active">
+            <h1>Welcome to the Blood Bank Management System</h1>
+            <p>This system allows you to manage donor and recipient information efficiently.</p>
+            <p>Use the navigation bar to explore different sections.</p>
+        </section>
+
+        <section id="donor">
+            <h2>Donor Information</h2>
+            <form id="donorForm">
+                <label for="donorName">Name:</label>
+                <input type="text" id="donorName" required>
+                
+                <label for="donorAge">Age:</label>
+                <input type="number" id="donorAge" required>
+
+                <label for="donorBloodType">Blood Type:</label>
+                <select id="donorBloodType" required>
+                    <option value="">Select...</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <button type="submit">Register Donor</button>
+            </form>
+            <div id="donorList"></div>
+        </section>
+
+        <section id="recipient">
+            <h2>Recipient Information</h2>
+            <form id="recipientForm">
+                <label for="recipientName">Name:</label>
+                <input type="text" id="recipientName" required>
+
+                <label for="recipientBloodType">Blood Type Needed:</label>
+                <select id="recipientBloodType" required>
+                    <option value="">Select...</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <button type="submit">Request Blood</button>
+            </form>
+            <div id="recipientList"></div>
+        </section>
+
+        <section id="admin">
+            <h2>Admin Panel</h2>
+            <h3>Manage Donors</h3>
+            <div id="adminDonorList"></div>
+            <h3>Manage Recipients</h3>
+            <div id="adminRecipientList"></div>
+            <h3>Manage Blood Stock</h3>
+            <form id="bloodStockForm">
+                <label for="bloodType">Blood Type:</label>
+                <select id="bloodType" required>
+                    <option value="">Select...</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="bloodAmount">Amount (in units):</label>
+                <input type="number" id="bloodAmount" required>
+
+                <button type="submit">Add Blood Stock</button>
+            </form>
+            <div id="bloodStockList"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
